@@ -1,4 +1,4 @@
-import axios from 'axios';
+import toastr from 'toastr';
 import {ChangeEvent, FormEvent, useRef, useState} from 'react';
 import {Avatar, Box, Button, IconButton} from '@mui/material';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
@@ -37,6 +37,7 @@ const PostForm = () => {
         createPostMutate(newPost);
         setImage(undefined);
         setDescription('');
+        toastr.success('Đăng bài viết thành công đợi 1 chút nhé bài viết sẽ được hiện ra trên bảng tin');
     };
 
     return (
