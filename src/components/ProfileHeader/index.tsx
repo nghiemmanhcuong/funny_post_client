@@ -54,7 +54,7 @@ const ProfileHeader = ({user, userClient, onOpenEditUserInfo}: ProfileHeaderProp
         <ProfileHeaderWap>
             {user.coverPicture ? (
                 <ProfileCoverPictureWap>
-                    <img src={ user.coverPicture} className='cover_img' />
+                    <img src={user.coverPicture} className='cover_img' />
                     {userClient._id === user._id && (
                         <Box className='upload-cover-picture' component='label'>
                             <input

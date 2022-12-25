@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import {useQuery, UseQueryResult} from '@tanstack/react-query';
 import InputEmoji from 'react-input-emoji';
+import toastr from 'toastr';
 
 import {PostItemAction, PostItemInfo, PostItemStyled} from './styles';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -108,6 +109,7 @@ const PostItem = ({post}: PostItemProps) => {
         handleClose();
         if (window.confirm('Bạn thật sự muốn xoá bài viết này?')) {
             deletePostMutate(post._id);
+            toastr.success('Xoá bài viết thành công');
         } else {
             return false;
         }

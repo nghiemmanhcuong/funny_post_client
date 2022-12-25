@@ -7,22 +7,20 @@ export const PostListStyled = styled('div')(({theme}) => ({
     overflowY: 'auto',
 }));
 
-export const PostItemStyled = styled('div')(({theme}) => ({
+export const WellcomCardStyled = styled('div')(({theme}) => ({
     background: '#fff',
     padding: theme.spacing(2),
     borderRadius: '10px',
 
-    '& > img': {
-        width: '100%',
-        marginTop: theme.spacing(1),
+    '& > .post-image': {
         borderRadius: '5px',
+        marginTop: theme.spacing(1)
     },
-}));
 
-export const PostItemAction = styled('div')(({theme}) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    columnGap: theme.spacing(1.5),
-    marginTop: theme.spacing(1)
+    '& > .post-image > img': {
+        width: '100%',
+        borderRadius: '5px',
+        maxHeight:'435px',
+        objectFit:'contain'
+    },
 }));
